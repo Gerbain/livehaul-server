@@ -1,0 +1,20 @@
+game:
+  name: "LiveHaul"
+  tick_rate: 1            # seconds between game loop ticks
+  time_scale: 60          # 1 real second = X game seconds (60 = 1 real min = 1 game hour)
+  starting_money: 10000
+  autosave_interval: 300  # seconds between autosaves
+  max_active_routes: 50
+  paused: false
+
+world:
+  region: "belgium"
+  spawn_jobs_interval: 120   # seconds between new job batches
+  jobs_per_spawn: 3          # how many jobs to add each interval
+  max_pending_jobs: 20       # max jobs visible on the board at once
+  job_expiry_time: 600       # seconds before an unclaimed job expires
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  log_level: "info"          # debug | info | warning | error

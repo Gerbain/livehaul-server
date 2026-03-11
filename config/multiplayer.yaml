@@ -1,0 +1,19 @@
+multiplayer:
+  enabled: true
+  mode: "competing"
+  show_rival_vehicles: true
+  show_rival_balance: true
+
+  job_board:
+    reservation_timeout: 30
+    show_who_claimed: true
+
+  companies:
+    company_a:
+      name: "FastFreight NV"
+      color: "#3B82F6"
+      starting_money: 10000
+    company_b:
+      name: "QuickHaul BV"
+      color: "#EF4444"
+      starting_money: 10000

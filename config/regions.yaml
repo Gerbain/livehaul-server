@@ -1,0 +1,76 @@
+playing_area:
+  name: "Belgium"
+  osm_relation_id: 52411
+
+  zones:
+    brussels:
+      name: "Brussels"
+      osm_relation_id: 54094
+      enabled: true
+      job_weight: 0.35
+      center: { lat: 50.8503, lng: 4.3517 }
+    antwerp:
+      name: "Antwerp"
+      osm_relation_id: 59518
+      enabled: true
+      job_weight: 0.25
+      center: { lat: 51.2194, lng: 4.4025 }
+    ghent:
+      name: "Ghent"
+      osm_relation_id: 913418
+      enabled: true
+      job_weight: 0.20
+      center: { lat: 51.0543, lng: 3.7174 }
+    liege:
+      name: "Liège"
+      osm_relation_id: 1407192
+      enabled: false
+      job_weight: 0.10
+      center: { lat: 50.6326, lng: 5.5797 }
+    bruges:
+      name: "Bruges"
+      osm_relation_id: 78265
+      enabled: false
+      job_weight: 0.10
+      center: { lat: 51.2093, lng: 3.2247 }
+
+job_generation:
+  pickup_types:
+    - tag: "building=warehouse"
+      weight: 0.40
+      cargo_hint: "general"
+    - tag: "landuse=industrial"
+      weight: 0.30
+      cargo_hint: "industrial"
+    - tag: "shop=supermarket"
+      weight: 0.15
+      cargo_hint: "dry_goods"
+    - tag: "amenity=fuel"
+      weight: 0.15
+      cargo_hint: "fuel_equipment"
+
+  dropoff_types:
+    - tag: "shop=supermarket"
+      weight: 0.35
+      cargo_hint: "dry_goods"
+    - tag: "amenity=restaurant"
+      weight: 0.25
+      cargo_hint: "food"
+    - tag: "office=company"
+      weight: 0.20
+      cargo_hint: "general"
+    - tag: "amenity=hospital"
+      weight: 0.10
+      cargo_hint: "medical"
+    - tag: "shop=department_store"
+      weight: 0.10
+      cargo_hint: "retail"
+
+  cargo_types:
+    general:        { min: 100,  max: 1000, label: "General goods" }
+    industrial:     { min: 500,  max: 5000, label: "Industrial freight" }
+    dry_goods:      { min: 200,  max: 2000, label: "Dry goods" }
+    food:           { min: 100,  max: 800,  label: "Food & beverage" }
+    medical:        { min: 50,   max: 500,  label: "Medical supplies" }
+    retail:         { min: 200,  max: 1500, label: "Retail merchandise" }
+    fuel_equipment: { min: 300,  max: 3000, label: "Equipment" }

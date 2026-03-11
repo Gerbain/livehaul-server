@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Environment
+.env
+*.env.local
+
+# Database (generated at runtime — never commit)
+data/*.db
+data/*.sqlite
+
+# OSM / OSRM data (can be GIGABYTES — never commit)
+*.osm.pbf
+*.osm
+osrm/data/*
+!osrm/data/.gitkeep
+tools/data/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

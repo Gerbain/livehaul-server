@@ -1,0 +1,66 @@
+vehicles:
+  van:
+    label: "Delivery Van"
+    speed_kmh: 50
+    capacity_kg: 500
+    cost: 5000
+    fuel_cost_per_km: 0.12
+    repair_cost: 500
+    unlock_level: 1
+    icon: "van.svg"
+    color: "#3B82F6"
+
+  refrigerated_van:
+    label: "Refrigerated Van"
+    speed_kmh: 48
+    capacity_kg: 800
+    cost: 12000
+    fuel_cost_per_km: 0.18
+    repair_cost: 800
+    unlock_level: 2
+    icon: "van_refrigerated.svg"
+    color: "#06B6D4"
+
+  small_truck:
+    label: "Small Truck"
+    speed_kmh: 40
+    capacity_kg: 2000
+    cost: 20000
+    fuel_cost_per_km: 0.28
+    repair_cost: 1200
+    unlock_level: 3
+    icon: "truck_small.svg"
+    color: "#8B5CF6"
+
+  large_truck:
+    label: "Large Truck"
+    speed_kmh: 35
+    capacity_kg: 5000
+    cost: 45000
+    fuel_cost_per_km: 0.42
+    repair_cost: 2000
+    unlock_level: 5
+    icon: "truck_large.svg"
+    color: "#F59E0B"
+
+  refrigerated_truck:
+    label: "Refrigerated Truck"
+    speed_kmh: 38
+    capacity_kg: 3000
+    cost: 35000
+    fuel_cost_per_km: 0.38
+    repair_cost: 1800
+    unlock_level: 4
+    icon: "truck_refrigerated.svg"
+    color: "#10B981"
+
+  semi:
+    label: "Semi Truck"
+    speed_kmh: 35
+    capacity_kg: 10000
+    cost: 75000
+    fuel_cost_per_km: 0.55
+    repair_cost: 3500
+    unlock_level: 6
+    icon: "semi.svg"
+    color: "#EF4444"

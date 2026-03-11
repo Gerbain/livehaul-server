@@ -1,0 +1,30 @@
+traffic:
+  enabled: true
+
+  rush_hours:
+    morning:
+      start: "07:30"
+      end: "09:30"
+      speed_multiplier: 0.50
+    evening:
+      start: "17:00"
+      end: "19:30"
+      speed_multiplier: 0.45
+
+  random_events:
+    accident:
+      enabled: true
+      probability_per_hour: 0.30
+      duration_minutes: { min: 10, max: 45 }
+      speed_multiplier: 0.20
+      radius_meters: 200
+    roadworks:
+      enabled: true
+      probability_per_hour: 0.10
+      duration_minutes: { min: 60, max: 240 }
+      speed_multiplier: 0.40
+      radius_meters: 150
+    breakdown:
+      enabled: true
+      probability_per_vehicle_per_hour: 0.05
+      repair_time_minutes: { min: 5, max: 30 }

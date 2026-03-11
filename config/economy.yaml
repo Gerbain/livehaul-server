@@ -1,0 +1,22 @@
+economy:
+  # Revenue
+  base_pay_per_km: 2.50
+  weight_multiplier: 0.002        # extra pay per kg per km
+  urgency_bonus_multiplier: 1.5   # multiplier for urgent jobs
+  on_time_bonus: 0.10             # fraction added if delivered before deadline
+  late_penalty: 0.30              # fraction deducted if delivered after deadline
+
+  # Running costs
+  fuel_enabled: true
+  overhead:
+    garage_cost_per_vehicle_per_day: 50
+    driver_cost_per_vehicle_per_day: 80
+
+  # Progression
+  xp_per_delivery: 10
+  xp_level_base: 100              # XP needed for level 2
+  xp_level_multiplier: 1.4        # XP requirement grows by this factor each level
+
+  # Starting fleet (assigned to first company on new game)
+  starting_vehicles:
+    - type: "van"

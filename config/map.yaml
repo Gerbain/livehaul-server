@@ -1,0 +1,27 @@
+map:
+  region: "belgium"
+  osm_extract_url: "https://download.geofabrik.de/europe/belgium-latest.osm.pbf"
+  osm_extract_filename: "belgium-latest.osm.pbf"
+
+  # Optional bounding box to clip the extract (null = use full file)
+  bounding_box: null
+  # bounding_box:
+  #   north: 51.8
+  #   south: 49.4
+  #   east:  6.5
+  #   west:  2.5
+
+  # Sent to the frontend on connect
+  default_center:
+    lat: 50.8503
+    lng: 4.3517       # Brussels
+  default_zoom: 8
+  min_zoom: 6
+  max_zoom: 18
+
+osrm:
+  host: "localhost"
+  port: 5000
+  profile: "car"          # car | bike | foot
+  timeout_seconds: 10
+  docker_image: "osrm/osrm-backend:latest"

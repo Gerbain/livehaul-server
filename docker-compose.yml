@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+
+  osrm:
+    image: osrm/osrm-backend:latest
+    container_name: livehaul-osrm
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./osrm/data:/data
+    command: osrm-routed --algorithm mld /data/belgium-latest.osrm
+    # Run ./tools/prepare_map.sh first to generate the .osrm files
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: livehaul-server
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config:/app/config    # mount config so hot-reload works
+      - ./data:/app/data        # persist SQLite database
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      osrm:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
