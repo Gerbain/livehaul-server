@@ -27,7 +27,7 @@ positions via WebSocket. Vehicles follow real roads using OpenStreetMap + OSRM.
 **Requirements:** Python 3.11+, Docker Desktop
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/livehaul-server
+git clone https://github.com/gerbain/livehaul-server
 cd livehaul-server
 
 # Python environment
@@ -90,7 +90,7 @@ Edit any file in `config/` — most changes apply live without a restart.
 rsync -av osrm/data/ pi@livehaul.local:~/livehaul-server/osrm/data/
 
 # 3. On Pi — first-time setup
-git clone https://github.com/YOUR_USERNAME/livehaul-server
+git clone https://github.com/gerbain/livehaul-server
 cd livehaul-server
 ./pi/setup.sh
 
