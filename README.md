@@ -5,7 +5,7 @@ Backend game server for **LiveHaul** — a real-world logistics management game.
 Runs on a Raspberry Pi (or any machine). All connected browsers receive live vehicle
 positions via WebSocket. Vehicles follow real roads using OpenStreetMap + OSRM.
 
-**Client repo:** [livehaul-client](https://github.com/YOUR_USERNAME/livehaul-client)
+**Client repo:** [livehaul-client](https://github.com/gerbain/livehaul-client)
 
 ---
 
